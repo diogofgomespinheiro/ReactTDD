@@ -31745,7 +31745,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var App = function App() {
   return _react.default.createElement("div", {
     className: "hello"
-  }, "Hello, World");
+  }, "Hello, World!");
 };
 
 var _default = App;
