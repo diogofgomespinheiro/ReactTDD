@@ -6107,6 +6107,11 @@ react-is@^16.12.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6, react-i
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
 
+react-materialize@^3.5.8:
+  version "3.5.8"
+  resolved "https://registry.yarnpkg.com/react-materialize/-/react-materialize-3.5.8.tgz#6d455db9d328278c91ef5fa7cbb232f56ed5ecd9"
+  integrity sha512-q7x9d0plrlczxgMeAkgKG7Lo2XASwRvPexNZP3FeVecX0d2nj3aXeKI5MPnNUvUeFaQPSu9pY5/2H3hK4yuU2g==
+
 react-test-renderer@^16.0.0-0:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.12.0.tgz#11417ffda579306d4e841a794d32140f3da1b43f"
