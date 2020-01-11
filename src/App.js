@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import RestaurantList from "./components/RestaurantList";
 
 const App = () => {
   const [name, setName] = useState("viewers");
   return (
-    <div className="hello">Hello, {name}!</div>
+    <div>
+      <RestaurantList />
+    </div>
   );
 }
 
