@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NewRestaurantForm from "../NewRestaurantForm";
+import { Button, Collection, CollectionItem } from "react-materialize";
 
 const RestaurantList = () => {
   const [restaurantNames, setRestaurantNames] = useState([]);
@@ -12,24 +13,30 @@ const RestaurantList = () => {
 
   const handleShowNewRestaurantForm = () => {
     setShowNewRestaurantForm(oldState => !oldState);
-  }
+  };
 
   return (
     <div>
-      <button
+      <Button
         data-test="addRestaurantButton"
         onClick={handleShowNewRestaurantForm}
       >
         Add Restaurant
-      </button>
+      </Button>
       {showNewRestaurantForm && (
         <NewRestaurantForm onSave={handleAddRestaurant} />
       )}
-      <ul>
-        {restaurantNames.map(restaurantName => (
-          <li key={restaurantName}>{restaurantName}</li>
-        ))}
-      </ul>
+      <Collection header="Restaurants">
+        {restaurantNames.length === 0 ? (
+          <CollectionItem key="no-restaurant">Not added yet</CollectionItem>
+        ) : (
+          restaurantNames.map(restaurantName => (
+            <CollectionItem key={restaurantName}>
+              {restaurantName}
+            </CollectionItem>
+          ))
+        )}
+      </Collection>
     </div>
   );
 };
