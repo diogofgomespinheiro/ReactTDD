@@ -13,7 +13,7 @@ const RestaurantList = () => {
 
   const handleShowNewRestaurantForm = () => {
     setShowNewRestaurantForm(oldState => !oldState);
-  }
+  };
 
   return (
     <div>
@@ -26,10 +26,16 @@ const RestaurantList = () => {
       {showNewRestaurantForm && (
         <NewRestaurantForm onSave={handleAddRestaurant} />
       )}
-      <Collection>
-        {restaurantNames.map(restaurantName => (
-          <CollectionItem key={restaurantName}>{restaurantName}</CollectionItem>
-        ))}
+      <Collection header="Restaurants">
+        {restaurantNames.length === 0 ? (
+          <CollectionItem key="no-restaurant">Not added yet</CollectionItem>
+        ) : (
+          restaurantNames.map(restaurantName => (
+            <CollectionItem key={restaurantName}>
+              {restaurantName}
+            </CollectionItem>
+          ))
+        )}
       </Collection>
     </div>
   );
